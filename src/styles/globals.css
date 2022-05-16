@@ -8,10 +8,9 @@
 }
 
 html {
-  font-family: Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo,
-  sans-serif;
+  font-family: Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
   background-color: #8b8b8b;
-  color:white
+  color: white;
 }
 
 body {
@@ -20,7 +19,7 @@ body {
 }
 
 ul {
-  list-style-type:none;
+  list-style-type: none;
   margin-block-start: 0em;
   margin-block-end: 0em;
   padding-inline-start: 0px;
@@ -32,11 +31,11 @@ li {
 
 a {
   text-decoration: none;
-  color:#a9a9a9;
+  color: #a9a9a9;
 }
 
 a:hover {
-  color:#666666;
+  color: #666666;
 }
 
 /*--------------------------------
@@ -46,12 +45,12 @@ a:hover {
   display: flex;
   align-items: center;
   background-color: antiquewhite;
-  padding:20px 10px;
+  padding: 20px 10px;
 }
 
 .header__title {
   margin-right: auto;
-  color:black
+  color: black;
 }
 
 .header__gnav__item {
@@ -67,7 +66,7 @@ a:hover {
 ---------------------------------*/
 .article {
   background-color: black;
-  padding:30px 20px;
+  padding: 30px 20px;
 }
 
 .article__header {
@@ -79,11 +78,11 @@ a:hover {
 }
 
 .article__body {
-  width:100%;
+  width: 100%;
   overflow: hidden;
 }
 
-.article__body>p {
+.article__body > p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
@@ -101,14 +100,13 @@ a:hover {
   footer
 ---------------------------------*/
 .footer {
-  padding:20px 20px;
+  padding: 20px 20px;
   background-color: black;
   border-top: 1px solid #666666;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 .footer__gnav__item {
   margin-left: 20px;
