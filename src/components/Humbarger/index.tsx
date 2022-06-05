@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useScroll } from '@/hooks/useScroll';
 
 const StyledHumbarger = styled.div<{ open: boolean }>`
   display: none;
@@ -43,11 +44,17 @@ type Props = {
 };
 
 export default function Humbarger({ open, setOpen }: Props) {
+  const { scrolling, scrollTop } = useScroll();
+
   return (
-    <StyledHumbarger open={open} onClick={() => setOpen(!open)}>
-      <div />
-      <div />
-      <div />
-    </StyledHumbarger>
+    <>
+      {!scrolling && scrollTop == 0 && (
+        <StyledHumbarger open={open} onClick={() => setOpen(!open)}>
+          <div />
+          <div />
+          <div />
+        </StyledHumbarger>
+      )}
+    </>
   );
 }

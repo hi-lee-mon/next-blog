@@ -8,7 +8,7 @@ const HeaderLayout = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  .headline {
+  h1 {
     letter-spacing: 0.5rem;
   }
 
@@ -26,8 +26,8 @@ type Props = {
 export default function Header(props: Props) {
   return (
     <HeaderLayout>
-      <h1 className='headline'>
-        <Link href='#'>
+      <h1>
+        <Link href='/'>
           <a>Shun</a>
         </Link>
       </h1>

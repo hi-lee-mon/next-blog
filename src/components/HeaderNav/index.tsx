@@ -64,18 +64,18 @@ export default function HeaderNav({ open }: Props) {
     <StyledHeaderNav open={open}>
       <ul>
         <li>
-          <Link href='#'>
-            <a href='#'>Home</a>
+          <Link href='/'>
+            <a>Home</a>
           </Link>
         </li>
         <li>
-          <Link href='#'>
-            <a href='#'>Blog</a>
+          <Link href='/Blog'>
+            <a>Blog</a>
           </Link>
         </li>
         <li>
-          <Link href='#'>
-            <a href='#'>About</a>
+          <Link href='/About'>
+            <a>About</a>
           </Link>
         </li>
       </ul>
