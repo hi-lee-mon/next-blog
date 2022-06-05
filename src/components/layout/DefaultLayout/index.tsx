@@ -12,7 +12,7 @@ export default function DefaultLayout({ children }: Props) {
     <>
       <Header {...{ open, setOpen }} />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

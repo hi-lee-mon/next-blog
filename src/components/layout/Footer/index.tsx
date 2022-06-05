@@ -1,22 +1,46 @@
-import CustmizedLink from '@/components/atoms/CustmizedLink';
+import Link from 'next/link';
+import styled from 'styled-components';
+
+// TODO:画面幅両端から30pxに統一するか？
+
+const StyledFooter = styled.footer`
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+
+  nav > ul > li {
+    margin-bottom: 20px;
+  }
+`;
 
 export default function Footer() {
   return (
-    <footer className='footer'>
-      <div className='footer__copyright'>&copy;shun</div>
-      <nav className='footer__gnav'>
-        <ul className='footer__gnav__list'>
-          <li className='footer__gnav__item'>
-            <CustmizedLink path='#' text='Blog' />
+    <StyledFooter>
+      <div>&copy;shun2022</div>
+      <nav>
+        <ul>
+          <li>
+            <Link href='#'>
+              <a href='#'>Home</a>
+            </Link>
           </li>
-          <li className='footer__gnav__item'>
-            <CustmizedLink path='#' text='About' />
+          <li>
+            <Link href='#'>
+              <a href='#'>Blog</a>
+            </Link>
           </li>
-          <li className='footer__gnav__item'>
-            <CustmizedLink path='#' text='GitHub' />
+          <li>
+            <Link href='#'>
+              <a href='#'>About</a>
+            </Link>
+          </li>
+          <li>
+            <Link href='#'>
+              <a href='#'>Git Hub</a>
+            </Link>
           </li>
         </ul>
       </nav>
-    </footer>
+    </StyledFooter>
   );
 }
