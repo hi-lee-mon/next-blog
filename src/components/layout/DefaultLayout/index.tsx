@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 
@@ -6,11 +7,12 @@ type Props = {
 };
 
 export default function DefaultLayout({ children }: Props) {
+  const [open, setOpen] = useState(false);
   return (
     <>
-      <Header />
+      <Header {...{ open, setOpen }} />
       <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

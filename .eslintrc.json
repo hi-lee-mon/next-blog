@@ -15,6 +15,7 @@
     "prettier"
     // "plugin:@typescript-eslint/recommended",
   ],
+  "plugins": ["filenames"],
   "rules": {
     "import/order": [
       "error",
@@ -30,6 +31,13 @@
       "files": ["*.stories.tsx", "src/pages/**/*"],
       "rules": {
         "import/no-default-export": "off"
+      }
+    },
+    {
+      // ファイル名命名規則
+      "files": ["src/components/**/*.tsx"],
+      "rules": {
+        // "filenames/match-regex": [2, "^[A-Z].*$"]
       }
     },
     {

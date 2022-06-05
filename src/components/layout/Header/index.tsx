@@ -1,24 +1,38 @@
-import CustmizedLink from '@/components/atoms/CustmizedLink';
+import Link from 'next/link';
+import styled from 'styled-components';
+import HeaderNav from '../../HeaderNav';
+import Humbarger from '@/components/Humbarger';
 
-export default function Header() {
+const HeaderLayout = styled.header`
+  border-bottom: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .headline {
+    letter-spacing: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: normal;
+    padding: 0 30px;
+  }
+`;
+
+type Props = {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+};
+
+export default function Header(props: Props) {
   return (
-    <header className='header'>
-      <h1 className='header__title'>
-        <CustmizedLink path='#' text='Shun' />
+    <HeaderLayout>
+      <h1 className='headline'>
+        <Link href='#'>
+          <a>Shun</a>
+        </Link>
       </h1>
-      <nav className='header__gnav'>
-        <ul className='header__gnav__list'>
-          <li className='header__gnav__item'>
-            <CustmizedLink path='#' text='Blog' />
-          </li>
-          <li className='header__gnav__item'>
-            <CustmizedLink path='#' text='About' />
-          </li>
-          <li className='header__gnav__item'>
-            <CustmizedLink path='#' text='GitHub' />
-          </li>
-        </ul>
-      </nav>
-    </header>
+      <HeaderNav open={props.open} />
+      <Humbarger {...props} />
+    </HeaderLayout>
   );
 }
