@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import HeaderNav from '../../HeaderNav';
-import Humbarger from '@/components/Humbarger';
+import HeaderNav from './HeaderNav';
+import Humbarger from '@/components/layout/Header/Humbarger';
 
 const HeaderLayout = styled.header`
   border-bottom: 1px solid #000;
