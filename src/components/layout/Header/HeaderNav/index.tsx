@@ -2,6 +2,13 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 const StyledHeaderNav = styled.nav<{ open: boolean }>`
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
   ul {
     display: flex;
     li {

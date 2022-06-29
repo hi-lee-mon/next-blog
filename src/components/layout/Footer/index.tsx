@@ -9,6 +9,13 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-around;
 
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
   nav > ul > li {
     margin-bottom: 20px;
   }

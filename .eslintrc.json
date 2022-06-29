@@ -5,6 +5,7 @@
     "browser": true,
     "commonjs": true
   },
+  // extendsはESLintの設定をまとめてやってくれる設定
   "extends": [
     // "airbnb",
     // Next.jsの推奨config(react, react-hooksはnext経由で参照されている。)
@@ -15,6 +16,7 @@
     "prettier"
     // "plugin:@typescript-eslint/recommended",
   ],
+  // yarn addしたプラグインをpluginsに指定してrulesにルールを書く
   "plugins": ["filenames"],
   "rules": {
     "import/order": [
@@ -26,6 +28,7 @@
       }
     ]
   },
+  // pluginsとrulesて指定したものを上書きする
   "overrides": [
     {
       "files": ["*.stories.tsx", "src/pages/**/*"],
