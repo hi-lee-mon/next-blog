@@ -46,7 +46,8 @@ export default function PostPage({ post }: Props) {
       <Head>
         <title>{post.meta.title}</title>
       </Head>
-      <h1>{post.meta.title}</h1>
+      {/* TODO:タイトルだとわかるようにしたい */}
+      <h2 style={{ fontSize: '40px' }}>{post.meta.title}</h2>
       <MDXRemote {...post.source} components={{ YouTube, Image }} />
     </DefaultLayout>
   );

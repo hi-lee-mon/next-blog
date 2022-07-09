@@ -21,7 +21,7 @@ const StyledHeaderNav = styled.nav<{ open: boolean }>`
       border-radius: 2px;
       transition: all 0.3s;
       &:hover {
-        border-bottom: 2px solid #333;
+        border-bottom: ${({ theme }) => `1px solid ${theme.colors.border}`};
       }
     }
   }

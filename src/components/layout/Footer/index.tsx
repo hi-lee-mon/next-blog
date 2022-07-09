@@ -4,7 +4,7 @@ import styled from 'styled-components';
 // TODO:画面幅両端から30pxに統一するか？
 
 const StyledFooter = styled.footer`
-  border-top: 1px solid #000;
+  border-top: ${({ theme }) => `1px solid ${theme.colors.border}`};
   padding: 30px;
   display: flex;
   justify-content: space-around;

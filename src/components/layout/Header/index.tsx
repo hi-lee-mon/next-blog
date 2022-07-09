@@ -4,7 +4,7 @@ import HeaderNav from './HeaderNav';
 import Humbarger from '@/components/layout/Header/Humbarger';
 
 const HeaderLayout = styled.header`
-  border-bottom: 1px solid #000;
+  border-bottom: ${({ theme }) => `1px solid ${theme.colors.border}`};
   display: flex;
   align-items: center;
   justify-content: space-around;

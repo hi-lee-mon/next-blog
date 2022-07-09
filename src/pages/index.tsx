@@ -8,7 +8,8 @@ export default function Home() {
         <title>Home</title>
         <meta name='description' content='shunのホームページです' />
       </Head>
-      <h1>ここはホームページです。</h1>
+      <h1>Home</h1>
+      <p>Homeページ製造中...</p>
     </DefaultLayout>
   );
 }
