@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import dayjs from 'dayjs';
 import { sync } from 'glob';
 import matter from 'gray-matter';
 
@@ -42,7 +43,7 @@ export const getPostFromSlug = (slug: string): Post => {
       excerpt: data.excerpt ?? '',
       title: data.title ?? slug,
       tags: (data.tags ?? []).sort(),
-      date: (data.date ?? new Date()).toString(),
+      date: dayjs(data.date ?? new Date()).format('YYYY-MM-DD'),
     },
   };
 };

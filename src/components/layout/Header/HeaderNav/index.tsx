@@ -70,11 +70,11 @@ export default function HeaderNav({ open }: Props) {
   return (
     <StyledHeaderNav open={open}>
       <ul>
-        <li>
+        {/* <li>
           <Link href='/'>
             <a>Home</a>
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link href='/Blog'>
             <a>Blog</a>

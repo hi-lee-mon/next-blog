@@ -17,6 +17,7 @@
     "@next/mdx": "^12.1.6",
     "@types/styled-components": "^5.1.25",
     "babel-plugin-styled-components": "^2.0.7",
+    "dayjs": "^1.11.3",
     "glob": "^8.0.3",
     "gray-matter": "^4.0.3",
     "next": "12.1.6",

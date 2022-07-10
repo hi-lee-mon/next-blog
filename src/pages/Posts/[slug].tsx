@@ -8,6 +8,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeSlug from 'rehype-slug';
 import { getPostFromSlug, getSlugs, PostMeta } from '@/api/api';
+import Title from '@/components/Title';
 import YouTube from '@/components/Youtube';
 import DefaultLayout from '@/components/layout/DefaultLayout';
 import 'highlight.js/styles/atom-one-dark.css';
@@ -44,10 +45,9 @@ export default function PostPage({ post }: Props) {
   return (
     <DefaultLayout>
       <Head>
-        <title>{post.meta.title}</title>
+        <title>{Date.parse(post.meta.title)}</title>
       </Head>
-      {/* TODO:タイトルだとわかるようにしたい */}
-      <h2 style={{ fontSize: '40px' }}>{post.meta.title}</h2>
+      <Title title={post.meta.title} date={post.meta.date} />
       <MDXRemote {...post.source} components={{ YouTube, Image }} />
     </DefaultLayout>
   );
